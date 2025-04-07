@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TODO.SignUpPage"
+             Shell.NavBarIsVisible="False"
+             Shell.FlyoutBehavior="Disabled"
+             BackgroundColor="white"
+             Title="Sign Up">
+
+    <VerticalStackLayout Margin="30" Spacing="15"
+                         VerticalOptions="Center"
+                         HorizontalOptions="Center">
+
+        <Image Source="taskflowlogo.png"
+               HeightRequest="220"
+               WidthRequest="220"
+               Aspect="AspectFill" />
+
+        <!-- Wrap Username Entry in Frame to add CornerRadius -->
+        <Frame BackgroundColor="#C4DAD2" 
+               CornerRadius="15"
+               Padding="0" 
+               HeightRequest="50" 
+               WidthRequest="250">
+            <Entry Placeholder="Username"
+                   PlaceholderColor="#8DB8AF"
+                   TextColor="#8DB8AF"
+                   FontSize="16" />
+        </Frame>
+
+        <!-- Wrap Email Entry in Frame to add CornerRadius -->
+        <Frame BackgroundColor="#C4DAD2" 
+               CornerRadius="15"
+               Padding="0" 
+               HeightRequest="50" 
+               WidthRequest="250">
+            <Entry Placeholder="Email"
+                   PlaceholderColor="#8DB8AF"
+                   TextColor="#8DB8AF"
+                   FontSize="16" />
+        </Frame>
+
+        <!-- Wrap Password Entry in Frame to add CornerRadius -->
+        <Frame BackgroundColor="#C4DAD2" 
+               CornerRadius="15"
+               Padding="0" 
+               HeightRequest="50" 
+               WidthRequest="250">
+            <Entry Placeholder="Password"
+                   PlaceholderColor="#8DB8AF"
+                   IsPassword="True"
+                   TextColor="#8DB8AF"
+                   FontSize="16" />
+        </Frame>
+
+        <!-- Wrap Confirm Password Entry in Frame to add CornerRadius -->
+        <Frame BackgroundColor="#C4DAD2" 
+               CornerRadius="15"
+               Padding="0" 
+               HeightRequest="50" 
+               WidthRequest="250">
+            <Entry Placeholder="Confirm Password"
+                   PlaceholderColor="#8DB8AF"
+                   IsPassword="True"
+                   TextColor="#8DB8AF"
+                   FontSize="16" />
+        </Frame>
+
+        <Button Text="Sign Up"
+                BackgroundColor="#6A9C89"
+                TextColor="White"
+                FontSize="16"
+                HeightRequest="45"
+                WidthRequest="150"
+                Clicked="OnSignUpConfirmClicked"/>
+
+        <Button Text="Sign In"
+                BackgroundColor="#395144"
+                TextColor="White"
+                FontSize="16"
+                HeightRequest="45"
+                WidthRequest="150"
+                Clicked="OnSignInClicked"/>
+
+    </VerticalStackLayout>
+
+</ContentPage>

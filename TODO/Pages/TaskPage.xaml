@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:components="clr-namespace:TODO.Pages"
+             x:Class="TODO.Pages.TaskPage"
+             Title="Task"
+             BackgroundColor="White">
+
+    <Grid RowDefinitions="*,Auto">
+       
+        <ScrollView Grid.Row="0">
+            <VerticalStackLayout Padding="10" Spacing="10">
+                
+                <SwipeView>
+                    <SwipeView.RightItems>
+                        <SwipeItems Mode="Reveal">
+                            <SwipeItem  BackgroundColor="Red" IconImageSource="trash.png" />
+                            <SwipeItem  BackgroundColor="#F0AD4E" IconImageSource="edit.png" Clicked="GotoEditPage" />
+                            <SwipeItem  BackgroundColor="Green" IconImageSource="check.png" />
+                        </SwipeItems>
+                    </SwipeView.RightItems>
+
+                    <Frame BackgroundColor="#D6E9E5" BorderColor="Transparent" CornerRadius="10" Padding="10" HasShadow="True" Margin="20,0,20,0">
+                        <Label Text="Title 1" FontSize="16" VerticalOptions="Center" TextColor="#74968F" />
+                    </Frame>
+                </SwipeView>
+
+                <SwipeView>
+                    <SwipeView.RightItems>
+                        <SwipeItems Mode="Reveal">
+                            <SwipeItem  BackgroundColor="Red" IconImageSource="trash.png" />
+                            <SwipeItem  BackgroundColor="#F0AD4E" IconImageSource="edit.png" Clicked="GotoEditPage" />
+                            <SwipeItem  BackgroundColor="Green" IconImageSource="check.png" />
+                        </SwipeItems>
+                    </SwipeView.RightItems>
+
+                    <Frame BackgroundColor="#D6E9E5" BorderColor="Transparent" CornerRadius="10" Padding="10" HasShadow="True" Margin="20,0,20,0">
+                        <Label Text="Title 2" FontSize="16" VerticalOptions="Center" TextColor="#74968F" />
+                    </Frame>
+                </SwipeView>
+
+                <SwipeView>
+                    <SwipeView.RightItems>
+                        <SwipeItems Mode="Reveal">
+                            <SwipeItem  BackgroundColor="Red" IconImageSource="trash.png" />
+                            <SwipeItem  BackgroundColor="#F0AD4E" IconImageSource="edit.png" Clicked="GotoEditPage" />
+                            <SwipeItem  BackgroundColor="Green" IconImageSource="check.png" />
+                        </SwipeItems>
+                    </SwipeView.RightItems>
+
+                    <Frame BackgroundColor="#D6E9E5" BorderColor="Transparent" CornerRadius="10" Padding="10" HasShadow="True" Margin="20,0,20,0">
+                        <Label Text="Title 3" FontSize="16" VerticalOptions="Center" TextColor="#74968F" />
+                    </Frame>
+                </SwipeView>
+
+                
+            </VerticalStackLayout>
+        </ScrollView>
+
+        <!-- Footer -->
+        <components:Footer Grid.Row="1" />
+
+        
+        <ImageButton Source="add.png" HeightRequest="70" WidthRequest="70" Margin="0,0,20,20"
+                     HorizontalOptions="End" VerticalOptions="End" Clicked="GotoAddPage"/>
+    </Grid>
+</ContentPage>
